@@ -1,8 +1,8 @@
 
 
 print_abbreviations <- function(name) {
-  if (name == 'xiawei') {
-    return('xw')
+  if (name == 'sascha') {
+    return('sg')
   } else if (name == 'timothee') {
     return('tr')
   } else if (name == 'daniel') {
