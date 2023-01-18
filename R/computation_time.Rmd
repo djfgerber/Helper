@@ -1,0 +1,28 @@
+---
+title: "Computation times"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse, warn.conflicts = FALSE)
+```
+
+Collection of computation times.
+
+```{r}
+tibble(
+  "PC" = c("w15007","w15007"),
+  "n_fixed_effect" = c(7,7),
+  "n_random_effects" = c(338*2,338*2),
+  "total_parameters" = c(n_fixed_effect + n_random_effects + 2),
+  "software" = c("openbugs", "openbugs"),
+  "n_iterations_per_chain" = c(100, 1000),
+  "n_chains" = c(4, 4),
+  "n_iterations" = n_iterations_per_chain * n_chains,
+  "n_cores" = c(1,1),
+  "time_sec" = c(248, 1208),
+  "time_min" = time_sec /60
+) %>% knitr::kable()
+
+```

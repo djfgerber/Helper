@@ -1,0 +1,38 @@
+---
+title: "Test Read and Save simulations from Rmarkdown"
+author: "Daniel Gerber"
+date: "6/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse, warn.conflicts = FALSE)
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE,
+                      comment = "#>",
+                      fig.width = 10,
+                      dev = 'svg')
+knitr::opts_knit$set(root.dir = '../')
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r read_helper, include=FALSE}
+source("../Helper/R/helper.R", local = knitr::knit_global())
+```
+
+
+Test Read and Save simulations from Rmarkdown
+
+# Save
+
+```{r simulation, cache = FALSE}
+cars %>% write_simulation("simulation")
+```
+
+# Read
+
+```{r pressure, echo=FALSE}
+mycars <- read_simulation("simulation")
+plot(mycars$speed)
+```
+

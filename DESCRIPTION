@@ -1,0 +1,50 @@
+Package: Helper
+Title: You get by with a little helpeR
+Version: 0.0.1.0000
+Authors@R: 
+    person(given = "Daniel J. F.",
+           family = "Gerber",
+           role = c("aut", "cre"),
+           email = "daniel.gerber@swisstph.ch",
+           comment = c(ORCID = "0000-0002-7579-4429"))
+Description: Package contains usefull and less usefull functions in order to help with my PhD and be able to reuse previously defined functions such as not to repeat myself.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    broom,
+    car,
+    dplyr,
+    flextable,
+    forcats,
+    ggplot2,
+    INLA,
+    lifecycle,
+    lme4,
+    lubridate,
+    magrittr,
+    MASS,
+    purrr,
+    raster,
+    readr,
+    rlang,
+    sf,
+    spBayes,
+    stars,
+    stringr,
+    terra,
+    tibble,
+    tidyr,
+    tmap,
+    xfun
+Suggests: 
+    VGAM,
+    furrr,
+    future,
+    GADMTools,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
